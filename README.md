@@ -16,7 +16,7 @@ $ npm install inquirer-bluebird --save
 ## Usage
 
 ```js
-var inquirer = require('inquirer-bluebird')(require('inquirer'));
+var inquirer = require('inquirer-bluebird');
 inquirer(questions).then(function(answers) {
   // code
 })

@@ -1,15 +1,14 @@
 var Promise = require('bluebird');
+var inquirer = require('inquirer');
 
-module.exports = function(inquirer) {
-  var old = inquirer.prompt;
+var old = inquirer.prompt;
 
-  inquirer.prompt = function(questions) {
-    return new Promise(function(resolve) {
-      return old(questions, function(answers) {
-        return resolve(answers);
-      });
+inquirer.prompt = function(questions) {
+  return new Promise(function(resolve) {
+    return old(questions, function(answers) {
+      return resolve(answers);
     });
-  };
-
-  return inquirer;
+  });
 };
+
+module.exports = inquirer;
