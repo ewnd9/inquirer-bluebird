@@ -20,7 +20,7 @@ $ npm install inquirer-bluebird --save
 ```js
 var inquirer = require('inquirer');
 new Promise(resolve => {
-  inquirer(questions).then(function(answers) {
+  inquirer.prompt(questions, function(answers) {
     resolve(answers);
   });  
 });
