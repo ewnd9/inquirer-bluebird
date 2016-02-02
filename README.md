@@ -1,8 +1,6 @@
 # inquirer-bluebird
 
-Bluebird wrapper for inquirer
-
-## Overview
+> Bluebird wrapper for [inquirer.js](https://www.npmjs.com/package/inquirer)
 
 There is [bluebird-inquirer](https://www.npmjs.com/package/bluebird-inquirer),
 but it promisify only prompt function, so I can't use `new inquirer.Separator()`.
@@ -18,7 +16,8 @@ $ npm install inquirer-bluebird --save
 ### Before
 
 ```js
-var inquirer = require('inquirer');
+const inquirer = require('inquirer');
+
 new Promise(resolve => {
   inquirer.prompt(questions, function(answers) {
     resolve(answers);
@@ -29,9 +28,14 @@ new Promise(resolve => {
 ### Now
 
 ```js
-var inquirer = require('inquirer-bluebird');
-inquirer(questions)
+const inquirer = require('inquirer-bluebird');
+
+inquirer.prompt(questions)
   .then(function(answers) {
 
   });
 ```
+
+## License
+
+MIT © [ewnd9](http://ewnd9.com)
