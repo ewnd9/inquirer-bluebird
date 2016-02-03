@@ -36,6 +36,12 @@ inquirer.prompt(questions)
   });
 ```
 
+## Related
+
+- [inquirer-question](https://github.com/ewnd9/inquirer-question)
+- [inquirer-credentials](https://github.com/ewnd9/inquirer-credentials)
+- [inquirer-menu](https://github.com/ewnd9/inquirer-menu)
+
 ## License
 
 MIT © [ewnd9](http://ewnd9.com)

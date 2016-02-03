@@ -2,7 +2,7 @@ var inquirer = require('./..');
 
 inquirer
   .prompt({
-		name: 'q1',
+    name: 'q1',
     type: 'list',
     message: 'hi',
     choices: ['test-1', 'test-2']

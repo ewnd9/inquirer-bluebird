@@ -1,7 +1,8 @@
 var inquirer = require('inquirer');
+
 new Promise(resolve => {
   inquirer.prompt({
-		name: 'q1',
+    name: 'q1',
     type: 'list',
     message: 'hi',
     choices: ['test-1', 'test-2']
@@ -10,5 +11,5 @@ new Promise(resolve => {
   });
 })
 .then(answers => {
-	console.log(answers);
+  console.log(answers);
 })
