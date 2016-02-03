@@ -1,9 +1,11 @@
 # inquirer-bluebird
 
+[![Build Status](https://travis-ci.org/ewnd9/inquirer-bluebird.svg?branch=master)](https://travis-ci.org/ewnd9/inquirer-bluebird)
+
 > Bluebird wrapper for [inquirer.js](https://www.npmjs.com/package/inquirer)
 
-There is [bluebird-inquirer](https://www.npmjs.com/package/bluebird-inquirer),
-but it promisify only prompt function, so I can't use `new inquirer.Separator()`.
+There is a [bluebird-inquirer](https://www.npmjs.com/package/bluebird-inquirer),
+but it promisify only prompt function, so you can't use `new inquirer.Separator()`.
 
 ## Install
 
@@ -12,6 +14,20 @@ $ npm install inquirer-bluebird --save
 ```
 
 ## Usage
+
+```js
+const questions = [{
+  name: 'a',
+  type: 'list',
+  message: 'pick a number',
+  choices: [ '1', '2', '3' ]
+}, {
+  name: 'b',
+  type: 'list',
+  message: 'pick a letter',
+  choices: [ 'x', 'y', 'z' ]
+}];
+```
 
 ### Before
 
@@ -22,6 +38,9 @@ new Promise(resolve => {
   inquirer.prompt(questions, function(answers) {
     resolve(answers);
   });  
+})
+.then(function(answers) {
+  //=> { a: '<1|2|3>', b: '<x|y|z>' }
 });
 ```
 
@@ -32,7 +51,7 @@ const inquirer = require('inquirer-bluebird');
 
 inquirer.prompt(questions)
   .then(function(answers) {
-
+    //=> { a: '<1|2|3>', b: '<x|y|z>' }
   });
 ```
 
@@ -41,6 +60,7 @@ inquirer.prompt(questions)
 - [inquirer-question](https://github.com/ewnd9/inquirer-question)
 - [inquirer-credentials](https://github.com/ewnd9/inquirer-credentials)
 - [inquirer-menu](https://github.com/ewnd9/inquirer-menu)
+- [inquirer-test](https://github.com/ewnd9/inquirer-test)
 
 ## License
 
