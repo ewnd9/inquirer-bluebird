@@ -57,10 +57,11 @@ inquirer.prompt(questions)
 
 ## Related
 
+- [inquirer](https://github.com/sboudrias/Inquirer.js)
+- [inquirer-test](https://github.com/ewnd9/inquirer-test)
 - [inquirer-question](https://github.com/ewnd9/inquirer-question)
 - [inquirer-credentials](https://github.com/ewnd9/inquirer-credentials)
 - [inquirer-menu](https://github.com/ewnd9/inquirer-menu)
-- [inquirer-test](https://github.com/ewnd9/inquirer-test)
 
 ## License
 
